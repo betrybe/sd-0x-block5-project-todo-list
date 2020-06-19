@@ -150,15 +150,16 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - Três itens serão criados na lista e será checado se eles estão ordenados por ordem de criação - ou seja, primeiro o primeiro item criado, depois o segundo, e assim por diante.
 
-### 7 - Ao passar o mouse sobre qualquer botão e qualquer item da lista o ícone do mouse deve mudar para uma mãozinha apontando-o.
+### 7 - Ao clicar em um item da lista, altere a cor de fundo do item para cinza rgb(128,128,128).
 ##### As seguintes verificações serão feitas:
 
-- O
+- Será verificado que, ao se carregar a página, os itens da lista **não tem** o estilo CSS `background-color: rgb(128, 128, 128)`
+- Será verificado que, ao se clicar em um item da lista, ele passa a ter o estilo CSS `background-color: rgb(128, 128, 128)`
 
-### 8 - Ao clicar em um item da lista, altere a cor de fundo do item para cinza rgb(128,128,128).
+### 8 - Não deve ser possível selecionar mais de um elemento da lista ao mesmo tempo.
 ##### As seguintes verificações serão feitas:
 
-- O
+- Será verificado que, quando um elemento da lista é selecionado, o elemento selecionado previamente deixa de sê-lo. Isso é verificado através da presença ou não do estilo `background-color: rgb(128, 128, 128)` no elemento.
 
 ### 9 - Ao clicar duas vezes em um item, ele deverá ser riscado, indicando que foi completo. Deve ser possível desfazer essa ação clicando novamente duas vezes no item.
 
@@ -166,28 +167,34 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
     * Crie uma classe CSS com o nome "completed" e defina a propriedade "text-decoration" com o valor "line-through".
 
-    * Utilize a classe CSS "completed" para adicionar o efeito de letra tachada (riscada) as tarefas finalizadas.
+    * Utilize a classe CSS "completed" para adicionar o efeito de letra tachada (riscada) às tarefas finalizadas.
 
 ##### As seguintes verificações serão feitas:
 
-- O
+- Será verificado que, antes da ação ser disparada, o elemento adicionado à lista não tem nem a classe `completed` nem o estilo `line-through solid rgb(0, 0, 0)`.
+- Será verificado que a ação pedida é disparada mediante duplo clique no elemento da lista
+- Será verificado que os elementos da lista completos tem em si a classe `completed`
+- Será verificado que os elementos da lista completos tem a propriedade `text-decoration` com o valor `line-through solid rgb(0, 0, 0)`
 
 ### 10 - Deve haver um botão com `id="apaga-tudo"` que quando clicado deve apagar todos os items da lista.
 ##### As seguintes verificações serão feitas:
 
-- O
+- Será verificado que existe um elemento `button` com o id `apaga-tudo`
+- Será verificado que, dado que uma lista possui tarefas, um clique no botão a deixa vazia
 
 ### 11 - Deve haver um botão com `id="remover-finalizados"` que quando clicado remove **somente** os elementos finalizados da sua lista.
 ##### As seguintes verificações serão feitas:
 
-- O
+- Será verificado que existe um elemento `button` com o id `remover-finalizados`
+- Será verificado que, ao clicar no botão, todos os elementos marcados como feitos são removidos da lista
 
 ## BÔNUS
 
 ### 1 - Adicione um botão com `id="salvar-tarefas"` que salve o conteúdo da lista. Se você fechar e reabrir a página, a lista deve continuar no estado em que estava. Dica: Leia sobre _Local Storage_ na seção de recursos adicionais.
 ##### As seguintes verificações serão feitas:
 
-- O
+- Será verificado que existe um elemento `button` com o id `salvar-tarefas`
+- Será verificado que, quando a lista tem vários elementos, alguns dos quais marcados como finalizados, um recarregamento da página mantém a lista exatamente como está.
 
 ### 2 - Como sua lista é ordenada, o que acontece se você esquecer de um item? Você teria que apagar a lista e começar tudo de novo, pois só é possível inserir um item no final, certo? Adicione dois botões, um com `id="mover-cima"` e outro com `id="mover-baixo"`, que permitam mover o item selecionado para cima ou para baixo na lista de tarefas.
 
@@ -201,18 +208,26 @@ TODO: "Eu lembro de um ponto específico, que era sobre um requisito bônus, que
 
 ##### As seguintes verificações serão feitas:
 
-- O
+- Será verificada a existência de dois elementos `button`, um com o id `mover-cima` e o outro com o id `mover-baixo`
+- Será verificado que, dado que diversos elementos foram acrescentados à lista, movimentá-los de formas diversas os deixa nas posições esperadas
+- Será verificado que, caso algum elemento esteja finalizado, este status deve persistir ainda que se mova o elemento
+- Será verificado que um elemento que esteja selecionado deve se manter selecionado mesmo depois de movido
+- Será verificado que, caso nenhum elemento esteja selecionado, clicar nos botões não altera a lista
+- _Caso especial!_ Será verificado que, caso se tente subir o elemento no topo da lista ou, caso se tente descer o último elemento da lista, esta não deve ser alterada
 
 ### 3 - Adicione um botão com `id="remover-selecionado"` que, quando clicado, remove o item selecionado.
 ##### As seguintes verificações serão feitas:
 
-- O
+- Será verificada a presença de um elemento `button` com um id `remover-selecionado`
+- Será verificado que, no clicar no botão, somente o elemento selecionado é removido
 
 ---
 
 ## Dicas
 
 - Para colocar sua página no [GitHub Pages](https://pages.github.com/), não é necessário remover o conteúdo que já está lá, você pode apenas adicionar essa nova página. Para isso, todo o conteúdo desse projeto deve ser colocado em uma pasta `/projetos/todo-list`.
+
+- **Lembre-se:** tirar 100% do avaliador não é o fim do trabalho! Customize-o, estilize-o, acrescente-o ao seu portfólio!
 
 ---
 
