@@ -118,15 +118,12 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 ### 1 - Sua lista deve possuir o título "Minha Lista de Tarefas" em uma tag `<header>`. Esse título não varia de acordo com o conteúdo da lista. _Não confunda esse título com o título da página, que deve aparecer dentro da tag `head`_.
 ##### As seguintes verificações serão feitas:
 
-- Será verificado se sua página possui uma tag `header`
-- Será verificado se essa tag possui o conteúdo `Minha Lista de Tarefas`
-
+- Será verificado se sua página possui uma tag `header` com o conteúdo `Minha Lista de Tarefas`
 
 ### 2 - Abaixo do título deve haver um pequeno e discreto parágrafo com `id="funcionamento"` e com o texto "Clique duas vezes em um item para marcá-lo como completo" explicando o funcionamento da lista para o usuário.
 ##### As seguintes verificações serão feitas:
 
-- Será verificado que existe na sua página um elemento com o id `funcionamento`
-- Será verificado que o elemento com esse id contém o conteúdo `Clique duas vezes em um item para marcá-lo como completo`
+- Será verificado que existe na sua página um elemento com o id `funcionamento` com o conteúdo `Clique duas vezes em um item para marcá-lo como completo`
 
 ### 3 - Deve haver um `input` com o `id="texto-tarefa"` onde o usuário poderá digitar o nome do item que deseja adicionar à lista.
 ##### As seguintes verificações serão feitas:
@@ -143,7 +140,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - Será verificada a existência de um elemento do tipo `button` com o id `criar-tarefa`
 - No campo de input será digitado o texto de uma tarefa qualquer e, em seguida, clicar-se-á no botão de criar tarefa. Será verificado que, após o clique, o texto digitado aparece na lista e desaparece do input.
-- A ação acima será feita algumas vezes, e será checado se todos os itens criados permanecem na lista na medida em que novos são adicionados.
+- A adição de elementos na lista será feita algumas vezes, e será checado se todos os itens criados permanecem na lista na medida em que novos são adicionados.
 
 ### 6 - Os itens da lista de tarefas devem ser ordenados por ordem de criação.
 ##### As seguintes verificações serão feitas:
@@ -172,9 +169,8 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 ##### As seguintes verificações serão feitas:
 
 - Será verificado que, antes da ação ser disparada, o elemento adicionado à lista não tem nem a classe `completed` nem o estilo `line-through solid rgb(0, 0, 0)`.
-- Será verificado que a ação pedida é disparada mediante duplo clique no elemento da lista
-- Será verificado que os elementos da lista completos tem em si a classe `completed`
-- Será verificado que os elementos da lista completos tem a propriedade `text-decoration` com o valor `line-through solid rgb(0, 0, 0)`
+- Será verificado que a ação pedida é disparada mediante duplo clique no elemento da lista e que os elementos da lista completos tem em si a classe `completed` e a propriedade `text-decoration` com o valor `line-through solid rgb(0, 0, 0)`
+- Será verificado que, com um segundo duplo clique, um elemento completo deixa de sê-lo
 
 ### 10 - Deve haver um botão com `id="apaga-tudo"` que quando clicado deve apagar todos os items da lista.
 ##### As seguintes verificações serão feitas:
@@ -190,15 +186,13 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ## BÔNUS
 
-### 1 - Adicione um botão com `id="salvar-tarefas"` que salve o conteúdo da lista. Se você fechar e reabrir a página, a lista deve continuar no estado em que estava. Dica: Leia sobre _Local Storage_ na seção de recursos adicionais.
+### 12 - Adicione um botão com `id="salvar-tarefas"` que salve o conteúdo da lista. Se você fechar e reabrir a página, a lista deve continuar no estado em que estava. Dica: Leia sobre _Local Storage_ na seção de recursos adicionais.
 ##### As seguintes verificações serão feitas:
 
 - Será verificado que existe um elemento `button` com o id `salvar-tarefas`
 - Será verificado que, quando a lista tem vários elementos, alguns dos quais marcados como finalizados, um recarregamento da página mantém a lista exatamente como está.
 
-### 2 - Como sua lista é ordenada, o que acontece se você esquecer de um item? Você teria que apagar a lista e começar tudo de novo, pois só é possível inserir um item no final, certo? Adicione dois botões, um com `id="mover-cima"` e outro com `id="mover-baixo"`, que permitam mover o item selecionado para cima ou para baixo na lista de tarefas.
-
-TODO: "Eu lembro de um ponto específico, que era sobre um requisito bônus, que não havia clareza que precisava remover a seleção do item que tava selecionado. Não existe nenhum requisito que fala que precisa remover a seleção de um item, quando o outro é clicado, aí nesse bônus dá zica". Qqr coisa ver com o hamaji
+### 13 - Adicione dois botões, um com `id="mover-cima"` e outro com `id="mover-baixo"`, que permitam mover o item selecionado para cima ou para baixo na lista de tarefas.
 
     Pontos importantes sobre este requisito bônus:
 
@@ -211,11 +205,11 @@ TODO: "Eu lembro de um ponto específico, que era sobre um requisito bônus, que
 - Será verificada a existência de dois elementos `button`, um com o id `mover-cima` e o outro com o id `mover-baixo`
 - Será verificado que, dado que diversos elementos foram acrescentados à lista, movimentá-los de formas diversas os deixa nas posições esperadas
 - Será verificado que, caso algum elemento esteja finalizado, este status deve persistir ainda que se mova o elemento
-- Será verificado que um elemento que esteja selecionado deve se manter selecionado mesmo depois de movido
 - Será verificado que, caso nenhum elemento esteja selecionado, clicar nos botões não altera a lista
+- Será verificado que um elemento que esteja selecionado deve se manter selecionado mesmo depois de movido
 - _Caso especial!_ Será verificado que, caso se tente subir o elemento no topo da lista ou, caso se tente descer o último elemento da lista, esta não deve ser alterada
 
-### 3 - Adicione um botão com `id="remover-selecionado"` que, quando clicado, remove o item selecionado.
+### 14 - Adicione um botão com `id="remover-selecionado"` que, quando clicado, remove o item selecionado.
 ##### As seguintes verificações serão feitas:
 
 - Será verificada a presença de um elemento `button` com um id `remover-selecionado`
