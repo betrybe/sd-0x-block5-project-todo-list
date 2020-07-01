@@ -56,7 +56,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ---
 
-# Entregáveis
+## Entregáveis
 
 Para entregar o seu projeto você deverá criar um Pull Request neste repositório.
 
