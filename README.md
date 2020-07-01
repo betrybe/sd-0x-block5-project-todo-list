@@ -186,7 +186,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ## BÔNUS
 
-### 12 - Adicione um botão com `id="salvar-tarefas"` que salve o conteúdo da lista. Se você fechar e reabrir a página, a lista deve continuar no estado em que estava. Dica: Leia sobre _Local Storage_ na seção de recursos adicionais.
+### 12 - Adicione um botão com `id="salvar-tarefas"` que salve o conteúdo da lista. Se você fechar e reabrir a página, a lista deve continuar no estado em que estava.
 ##### As seguintes verificações serão feitas:
 
 - Será verificado que existe um elemento `button` com o id `salvar-tarefas`
