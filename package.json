@@ -1,9 +1,11 @@
 {
   "devDependencies": {
     "eslint": "^7.3.1",
-    "eslint-config-airbnb": "^18.2.0"
+    "eslint-config-airbnb": "^18.2.0",
+    "stylelint": "^13.8.0"
   },
   "scripts": {
-    "lint": "eslint --no-inline-config --ext .js,.jsx --no-error-on-unmatched-pattern -c .eslintrc.json ."
+    "lint": "eslint --no-inline-config --ext .js,.jsx --no-error-on-unmatched-pattern -c .eslintrc.json .",
+    "lint:styles": "stylelint '**/*.css'"
   }
 }
